@@ -1,0 +1,280 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* OSX Buttons */
+/*
+    Mac OsX Button Credits: https://codepen.io/dev_loop/pen/rRrroJ
+*/
+
+.btn{
+	height: .9rem;
+    width: .9rem;
+    margin: 0 0.4rem;
+	border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn:nth-of-type(1) {
+    margin-left: 2rem;
+}
+.btn1{
+	background: #fac536;
+	position: relative;
+	overflow: hidden;
+}
+.btn1::before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 10%;
+	opacity: 0;
+	background: #222;
+	transition: 300ms;
+}
+.btn1:hover::before{
+	opacity: 1;
+	top: 50%;
+}
+.btn2{
+	background: #39ea49;
+	position: relative;
+	overflow: hidden;
+}
+.btn2::before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 45%;
+	height: 45%;
+	opacity: 0;
+	background: #222;
+	transition: 300ms;
+}
+.btn2::after{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	width: 15%;
+	height: 80%;
+	opacity: 0;
+	background: #39ea49;
+	transition: 300ms;
+}
+.btn2:hover::before, .btn2:hover::after{
+	opacity: 1;
+	top: 50%;
+}
+.btn3{
+	background: #f25056;
+	position: relative;
+	overflow: hidden;
+}
+.btn3::before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	width: 15%;
+	height: 50%;
+	opacity: 0;
+	background: #222;
+	transition: 300ms;
+}
+.btn3::after{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 15%;
+	opacity: 0;
+	height: 50%;
+	background: #222;
+	transition: 300ms;
+}
+.btn3:hover::before, .btn3:hover::after{
+	opacity: 1;
+	top: 50%;
+}
+
+/* Main style */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body {
+    min-height: 100vh;
+    min-width: 100%;
+    font-size: 14px;
+}
+
+body {
+    background-color: #ff9d00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    height: 90vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.browser-border {
+    display: flex;
+    flex-direction: row;
+    height: 5%;
+    width: 100%;
+    background-color: rgba(152, 152, 155, 0.7);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: left;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navbar */
+nav {
+    height: 100%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li::after {
+	content: "";
+	width: 200px;
+	height: 100px;
+	border-bottom: 10px solid rgba(255, 0, 255, .5);
+}
+
+nav ul li:last-of-type {
+    margin-top: auto;
+}
+
+
+nav ul li:hover {
+    background-color: rgba(231, 111, 81);
+    transition: .5s;
+}
+
+
+nav ul li i {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-left: 5px;
+    padding: 20px;
+}
+
+nav ul li span {
+    font-size: 1.1rem;
+    width: 0;
+    transition: .4s;
+    text-transform: capitalize;
+    transform: translateX(10px);
+}
+
+/* Content */
+main {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main section {
+    width: 95%;
+    margin: 1rem;
+    background-color: #808080;
+}
+
+main section:nth-of-type(1) {
+    margin-bottom: .5rem;
+}
+
+
+main section:nth-of-type(2) {
+    margin-top: .5rem;
+}
+

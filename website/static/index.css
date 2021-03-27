@@ -1,0 +1,184 @@
+HTML CSSResult Skip Results Iframe
+html {
+  background: url(https://4.bp.blogspot.com/-cCTtUWbUjbo/VbHxXn1-qzI/AAAAAAAAGBo/Jt9LdGLOu9c/s1600/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  font: 300 14px/18px Roboto;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: table
+}
+
+.clearfix:after {
+  clear: both;
+  display: block
+}
+
+.muck-up {
+  width: 506px;
+  height: 900px;
+  margin: 5em auto;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #fefefe;
+  background: url('https://4.bp.blogspot.com/-qEesPC6PSmI/VbHxX751lSI/AAAAAAAAGBk/PwpQXG7EUF0/s1600/background.jpg');
+}
+
+.overlay {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  margin-top: 123px;
+  margin-left: 36%;
+}
+
+.logo a {
+  height: 140px;
+  width: 140px;
+  display: block;
+  background-color: rgb(0, 231, 119);
+  z-index: 1;
+  border-radius: 32%;
+  text-align: center;
+  line-height: 140px;
+  font-size: 90px;
+  color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  top: 123px;
+  left: 36%;
+}
+
+.logo span {
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+}
+
+.header hr {
+  max-width: 59px;
+  border: 1px solid #00E777;
+  margin: 54px 0px 34px 226px;
+}
+
+.header h4 {
+  font-size: 48px;
+  margin-bottom: 34px;
+}
+
+.header h4 span {
+  color: #00e777;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+.login {
+  padding: 0 10%;
+  margin-top: 134px;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 16px 12px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+}
+
+.sign-in {
+  color: #fff;
+  font-size: 18px;
+  background: #586A74;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-color: #4B5961;
+}
+
+.sign-up {
+  color: #fff;
+  font-size: 18px;
+  background: #00E777;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-color: #0BDA76;
+}
+
+a.btn.connect-fb,
+a.btn.connect-tw {
+  width: 47%;
+  float: left;
+  text-align: left;
+  font-size: 16px;
+}
+
+a.btn.connect-fb i,
+a.btn.connect-tw i {
+  font-size: 43px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+
+a.btn.connect-fb span,
+a.btn.connect-tw span {
+  display: block;
+  text-align: left;
+}
+
+a.btn.connect-fb {
+  margin-right: 24px;
+  background: #3B559F;
+}
+
+a.btn.connect-tw {
+  background: #28A9E0;
+}
+
+
+Resources1× 0.5× 0.25×Rerun
