@@ -1,0 +1,12 @@
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/website.iml
+__pycache__/
+app.egg-info/
+venv/
+website/.env
+website/__init__.py
+website/__pycache__/
