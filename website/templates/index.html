@@ -1,25 +1,110 @@
-    <head>
-        <link rel="stylesheet" type="text/css" href="/static/index.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width" />
-    </head>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
-    <div class="muck-up">
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="logo">
-          <a href="#"><span class="fa fa-map-marker"></i></a>
-        </div>
-        <div class="header">
-          <hr>
-          <h4>Web<span>sit</span>e</h4>
-          <p>Welcome to Website</p>
-        </div>
-        <div class="login">
-          <a class="btn sign-in" href="login">Log In</a>
-          <a class="btn sign-up" href="signup">Sign Up</a>
+<head>
+  <title>Website</title>
+  <script src="{{url_for('static', filename='index.js')}}"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/index.css">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/rMXCDQM/android-chrome-192x192-1.png" />
+</head>
+
+<body>
+
+  <section class="menu menu--circle">
+    <input type="checkbox" id="menu__active" />
+    <label for="menu__active" class="menu__active">
+      <div class="menu__toggle">
+        <div class="icon">
+          <div class="hamburger"></div>
         </div>
       </div>
+      <input type="radio" name="arrow--up" id="degree--up-0" />
+      <input type="radio" name="arrow--up" id="degree--up-1" />
+      <input type="radio" name="arrow--up" id="degree--up-2" />
+      <div class="menu__listings">
+        <ul class="circle">
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="https://gitlab.com/blacksmithop/website" class="button"><i class="fa fa-gitlab"></i></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a onclick="openForm()" class="button"><i class="fa fa-sign-in"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="placeholder">
+              <div class="upside">
+                <a href="https://codepen.io/blacksmithop/pen/gOgWLGg" class="button"><i class="fa fa-codepen"></i></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+  </section>
+
+  <div class="header">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+      <!--Just the logo.. Don't mind this-->
+      <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+        <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+        <g>
+          <path fill="#fff" d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+        </g>
+      </svg>
+      <h1>Website</h1>
     </div>
+
+    <!--Waves Container-->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+
+  </div>
+  <!--Header ends-->
+
+  <!--Form starts-->
+<div class="form-popup" id="myForm">
+  <form action="{{ url_for('auth.login') }}" method="post" class="form-container">
+    <input type="text" placeholder="Username" name="username" required>
+
+    <input type="password" placeholder="Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="close fa fa-times" onclick="closeForm()"></button>
+  </form>
+</div>
+  <!--Form ends-->
+
+  <!--Content starts-->
+  <div class="content flex">
+    <p>BlackSmithOP | 2021 | Free to use</p>
+  </div>
+  <!--Content ends-->
+
     </body>
+
+</html>

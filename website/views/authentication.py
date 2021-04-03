@@ -68,7 +68,6 @@ def login():
         else:
             flash("Password is incorrect")
             return redirect(url_for('auth.login'))
-    return render_template('login/login.html'), 200
 
 
 @auth.route('/dashboard')

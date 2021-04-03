@@ -1,184 +1,386 @@
-HTML CSSResult Skip Results Iframe
-html {
-  background: url(https://4.bp.blogspot.com/-cCTtUWbUjbo/VbHxXn1-qzI/AAAAAAAAGBo/Jt9LdGLOu9c/s1600/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-a,
-a:hover,
-a:active,
-a:visited {
-  text-decoration: none;
-  color: #fff;
-}
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
-  font: 300 14px/18px Roboto;
+  margin:0;
 }
 
-*,
-:after,
-:before {
-  box-sizing: border-box
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
 }
-
-.clearfix:after,
-.clearfix:before {
-  content: '';
-  display: table
-}
-
-.clearfix:after {
-  clear: both;
-  display: block
-}
-
-.muck-up {
-  width: 506px;
-  height: 900px;
-  margin: 5em auto;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #fefefe;
-  background: url('https://4.bp.blogspot.com/-qEesPC6PSmI/VbHxX751lSI/AAAAAAAAGBk/PwpQXG7EUF0/s1600/background.jpg');
-}
-
-.overlay {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.content {
-  position: relative;
-  z-index: 10;
-}
-
-.logo {
-  margin-top: 123px;
-  margin-left: 36%;
-}
-
-.logo a {
-  height: 140px;
-  width: 140px;
-  display: block;
-  background-color: rgb(0, 231, 119);
-  z-index: 1;
-  border-radius: 32%;
-  text-align: center;
-  line-height: 140px;
-  font-size: 90px;
-  color: rgb(255, 255, 255);
-  transform: rotate(45deg);
-  top: 123px;
-  left: 36%;
-}
-
-.logo span {
-  transform: rotate(-45deg);
-  display: inline-block;
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  font-weight: bold;
+  color: #333333;
 }
 
 .header {
-  text-align: center;
-  color: #fff;
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
 }
-
-.header hr {
-  max-width: 59px;
-  border: 1px solid #00E777;
-  margin: 54px 0px 34px 226px;
-}
-
-.header h4 {
-  font-size: 48px;
-  margin-bottom: 34px;
-}
-
-.header h4 span {
-  color: #00e777;
-}
-
-.header p {
-  font-size: 18px;
-}
-
-.login {
-  padding: 0 10%;
-  margin-top: 134px;
-}
-
-.btn {
-  cursor: pointer;
-  display: block;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 16px 12px;
-  border-radius: 4px;
-  text-align: center;
-  white-space: nowrap;
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
   vertical-align: middle;
-  background-image: none;
-  line-height: 1.42857143;
-  border: 1px solid transparent;
 }
 
-.sign-in {
-  color: #fff;
-  font-size: 18px;
-  background: #586A74;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  border-color: #4B5961;
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
 }
 
-.sign-up {
-  color: #fff;
-  font-size: 18px;
-  background: #00E777;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  border-color: #0BDA76;
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-a.btn.connect-fb,
-a.btn.connect-tw {
-  width: 47%;
-  float: left;
-  text-align: left;
-  font-size: 16px;
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
 }
 
-a.btn.connect-fb i,
-a.btn.connect-tw i {
-  font-size: 43px;
-  display: block;
-  float: left;
-  margin-right: 20px;
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
 }
 
-a.btn.connect-fb span,
-a.btn.connect-tw span {
-  display: block;
-  text-align: left;
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
 }
 
-a.btn.connect-fb {
-  margin-right: 24px;
-  background: #3B559F;
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EDF5E1;
+  color: #EDF5E1;
+}
+body * {
+  box-sizing: border-box;
+}
+.icon {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.hamburger {
+  content: ' ';
+  position: relative;
+  width: 20px;
+  border: 2px solid #392338;
+  border-radius: 5px;
+  transition: all 0.333333333333333s ease;
+}
+.hamburger:after,
+.hamburger:before {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  border: 2px solid #392338;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  transition-property: top, bottom, transform;
+  transition-duration: 1s, 1s, 0.25s;
+}
+.hamburger:after {
+  top: -8px;
+}
+.hamburger:before {
+  bottom: -8px;
+}
+.menu {
+  pointer-events: none;
 }
 
-a.btn.connect-tw {
-  background: #28A9E0;
+.menu__active {
+  position: relative;
+}
+.menu__toggle {
+  z-index: 11;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  background-color: #EDF5E1;
+  border-radius: 50%;
+  transition: transform 1.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.menu__listings {
+  z-index: 10;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  transform: scale(0.1) rotate(150deg);
+  transition: transform 1s;
+}
+.menu__arrow {
+  visibility: hidden;
+  position: absolute;
+}
+.menu__arrow input[type="radio"] {
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+}
+.menu__arrow ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu__arrow--top {
+  top: 0.5em;
+  left: 220px;
+}
+.menu__arrow--top .arrow {
+  transform: rotate(-45deg);
+}
+.menu__arrow--left {
+  top: 220px;
+  left: 0.5em;
+}
+.menu__arrow--left .arrow {
+  transform: rotate(-135deg);
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 6.666666666666667px solid #EDF5E1;
+  border-top: 6.666666666666667px solid #EDF5E1;
+  border-radius: 3px;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.arrow:hover {
+  border-color: #ff947f;
+  transition: border-color 0.3s;
+}
+.circle {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #EDF5E1;
+  border-radius: 50%;
+  transform: rotate(108deg);
+  overflow: hidden;
+  list-style: none;
+}
+.circle li {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0 100%;
+}
+.circle li .placeholder {
+  position: absolute;
+  left: -100%;
+  padding-top: 1.5em;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(54deg) rotate(18deg);
+}
+.circle li .placeholder .upside {
+  transform: rotate(180deg);
+}
+.circle li .placeholder a {
+  text-decoration: none;
+  pointer-events: auto;
+}
+.circle li .placeholder button {
+  pointer-events: auto;
+}
+.circle li .placeholder .button {
+  font-size: 2.3em;
+  background-color: transparent;
+  border: none;
+  color: #392338;
+  cursor: pointer;
+}
+.circle li:nth-child(1) {
+  transform: rotate(0deg) skewY(-54deg);
+  background-color: #EDF5E1;
+}
+.circle li:nth-child(2) {
+  transform: rotate(36deg) skewY(-54deg);
+  background-color: #EDF5E1;
+}
+.circle li:nth-child(3) {
+  transform: rotate(324deg) skewY(-54deg);
+  background-color: #EDF5E1;
+}
+#menu__active {
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+}
+#menu__active:checked ~ label .menu__listings {
+  transform: rotate(10deg) scale(1);
+  transition: transform 1s;
+}
+#menu__active:checked ~ label .menu__toggle {
+  background-color: #392338;
+  transition: all 1s;
+}
+#menu__active:checked ~ label .hamburger {
+  border-color: transparent;
+  transition: border-color 0.333333333333333s;
+}
+#menu__active:checked ~ label .hamburger:after {
+  top: -2px;
+  border-color: #EDF5E1;
+  transform: translateX(-50%) rotate(45deg);
+  transition-property: top, transform;
+  transition-duration: 0.25s, 1s;
+}
+#menu__active:checked ~ label .hamburger:before {
+  bottom: -2px;
+  border-color: #EDF5E1;
+  transform: translateX(-50%) rotate(-45deg);
+  transition-property: bottom, transform;
+  transition-duration: 0.25s, 1s;
+}
+#menu__active:checked ~ label .button:hover {
+  color: #c1264e;
 }
 
 
-Resources1× 0.5× 0.25×Rerun
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  border-radius: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.close {
+  border-radius: 21px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 200px;
+  border-radius: 23px;
+  padding: 10px;
+  background-color: #392338;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #EDF5E1;
+  color: #C0C0C0;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  outline: none;
+  color: #000000;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  border-radius: 25px;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* remove focus */
+button:focus {outline:0;}
