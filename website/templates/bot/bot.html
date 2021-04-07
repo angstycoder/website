@@ -1,0 +1,48 @@
+<html>
+<head>
+      <link rel="stylesheet" type="text/css" href="/static/bot/bot.css">
+</head>
+  <body>
+<div id="demo">
+  <div class="discord-app-mount">
+    <div class="discord-app">
+      <div class="app-buttons"></div>
+      <div class="guilds">
+        <div class="guild selected" style="background-image: url(https://i.ibb.co/F436qJX/ambu-bot.png);"></div>
+        <div class="guild"></div>
+        <div class="guild guild-add"></div>
+      </div>
+      <div class="channels">
+        <div class="header">Bot Statistics</div>
+        <div class="channel-wrapper"></div>
+        <h4>#Guild Count: {{stats['guild_count']}}</h4>
+        <h4>#Member Count: {{stats['member_count']}}</h4>
+        <div class="user"></div>
+      </div>
+      <div class="chat">
+        <div class="header">general</div>
+        <div class="messages-wrapper">
+           <form action="{{ url_for('auth.webhook') }}", method="post", onsubmit="document.getElementsByClassName(">
+            <div class="wrap1">
+              <div class="search">
+
+                <input name="message" type="text" class="searchTerm" placeholder="Send a webhook">
+                <button type="submit" class="searchButton">
+                POST
+                </button>
+              </div>
+            </div>
+            </form>
+          <div class="messages"></div>
+        </div>
+        <div class="input-wrapper">
+          <div class="input">
+            <textarea placeholder="Message #general" disabled="disabled"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

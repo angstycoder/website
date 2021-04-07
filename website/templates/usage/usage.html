@@ -1,0 +1,98 @@
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Status</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/usage/usage.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="{{url_for('static', filename='usage/usage.js')}}">
+  </script>
+</head>
+<body>
+ <!-- Animated SVG Gauges -->
+
+  <!--
+    Gauge: > Network Load
+  -->
+  <svg id="gaugeLoad" percent="0">
+    <circle cx="120" cy="120" r="64"></circle>
+    <circle cx="120" cy="120" r="64"></circle>
+
+    <text class="value" x="120" y="130" text-anchor="middle">
+      <tspan>0%</tspan>
+    </text>
+
+    <text class="caption" x="120" y="220" text-anchor="middle">
+      <tspan>Network Load</tspan>
+    </text>
+  </svg>
+
+  <!--
+    Gauge: > CPU Usage
+  -->
+  <svg id="gaugeCPU" percent="0">
+    <circle cx="120" cy="120" r="64"></circle>
+    <circle cx="120" cy="120" r="64"></circle>
+
+    <text class="value" x="120" y="130" text-anchor="middle">
+      <tspan>0%</tspan>
+    </text>
+
+    <text class="caption" x="120" y="220" text-anchor="middle">
+      <tspan>CPU Usage</tspan>
+    </text>
+  </svg>
+
+  <!--
+    Gauge: > RAM Usage
+  -->
+  <svg id="gaugeRAM" percent="0">
+    <circle cx="120" cy="120" r="64"></circle>
+    <circle cx="120" cy="120" r="64"></circle>
+
+    <text class="value" x="120" y="130" text-anchor="middle">
+      <tspan>0%</tspan>
+    </text>
+
+    <text class="caption" x="120" y="220" text-anchor="middle">
+      <tspan>RAM Usage</tspan>
+    </text>
+  </svg>
+
+  <!--
+    Gauge: > Flash Usage
+  -->
+  <svg id="gaugeFlash" percent="0">
+    <circle cx="120" cy="120" r="64"></circle>
+    <circle cx="120" cy="120" r="64"></circle>
+
+    <text class="value" x="120" y="130" text-anchor="middle">
+      <tspan>0%</tspan>
+    </text>
+
+    <text class="caption" x="120" y="220" text-anchor="middle">
+      <tspan>Flash Usage</tspan>
+    </text>
+  </svg>
+
+  <!--
+    Gauge: > Storage
+  -->
+  <svg id="gaugeStorage" percent="0">
+    <circle cx="120" cy="120" r="64"></circle>
+    <circle cx="120" cy="120" r="64"></circle>
+
+    <text class="value" x="120" y="130" text-anchor="middle">
+      <tspan>0%</tspan>
+    </text>
+
+    <text class="caption" x="120" y="220" text-anchor="middle">
+      <tspan>Storage Usage</tspan>
+    </text>
+  </svg>
+  <!--/ Animated SVG Gauges -->
+
+</body>
+</html>

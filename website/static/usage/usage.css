@@ -1,0 +1,456 @@
+*:before, *:after {
+	 box-sizing: border-box;
+}
+ body, html {
+	 font-size: 16px;
+	 color: #fff;
+	 width: 100%;
+	 height: 100%;
+	 background: #607d86;
+}
+ body {
+	 display: flex;
+	 align-items: center;
+	 align-content: center;
+	 justify-content: space-around;
+	 flex-flow: row wrap;
+	 perspective: 1000;
+	 overflow: hidden;
+}
+ svg {
+	 display: block;
+	 width: 240px;
+	 height: 240px;
+	 margin: 5px;
+	/** * >> Circle * ------------------------------------------------- */
+	/** * >> Percentage Dashoffset * ------------------------------------------------- */
+	/** * >> Text * ------------------------------------------------ */
+}
+ svg circle {
+	 fill: none;
+	 stroke-width: 12px;
+	 transform-origin: 120px 120px 0;
+	 transform: rotate(270deg);
+}
+ svg circle:nth-child(1) {
+	 stroke: rgba(255, 255, 255, 0.2);
+}
+ svg circle:nth-child(2) {
+	 stroke: #7fc146;
+	 stroke-dasharray: 402.124;
+	 stroke-dashoffset: 402.124;
+	 transition: all 0.5s ease-out;
+}
+ svg[percent="1"] circle:nth-child(2) {
+	 stroke-dashoffset: 398.10276;
+	 stroke: #7fc146;
+}
+ svg[percent="2"] circle:nth-child(2) {
+	 stroke-dashoffset: 394.08152;
+	 stroke: #7fc146;
+}
+ svg[percent="3"] circle:nth-child(2) {
+	 stroke-dashoffset: 390.06028;
+	 stroke: #7fc146;
+}
+ svg[percent="4"] circle:nth-child(2) {
+	 stroke-dashoffset: 386.03904;
+	 stroke: #7fc146;
+}
+ svg[percent="5"] circle:nth-child(2) {
+	 stroke-dashoffset: 382.0178;
+	 stroke: #7fc146;
+}
+ svg[percent="6"] circle:nth-child(2) {
+	 stroke-dashoffset: 377.99656;
+	 stroke: #7fc146;
+}
+ svg[percent="7"] circle:nth-child(2) {
+	 stroke-dashoffset: 373.97532;
+	 stroke: #7fc146;
+}
+ svg[percent="8"] circle:nth-child(2) {
+	 stroke-dashoffset: 369.95408;
+	 stroke: #7fc146;
+}
+ svg[percent="9"] circle:nth-child(2) {
+	 stroke-dashoffset: 365.93284;
+	 stroke: #7fc146;
+}
+ svg[percent="10"] circle:nth-child(2) {
+	 stroke-dashoffset: 361.9116;
+	 stroke: #7fc146;
+}
+ svg[percent="11"] circle:nth-child(2) {
+	 stroke-dashoffset: 357.89036;
+	 stroke: #7fc146;
+}
+ svg[percent="12"] circle:nth-child(2) {
+	 stroke-dashoffset: 353.86912;
+	 stroke: #7fc146;
+}
+ svg[percent="13"] circle:nth-child(2) {
+	 stroke-dashoffset: 349.84788;
+	 stroke: #7fc146;
+}
+ svg[percent="14"] circle:nth-child(2) {
+	 stroke-dashoffset: 345.82664;
+	 stroke: #7fc146;
+}
+ svg[percent="15"] circle:nth-child(2) {
+	 stroke-dashoffset: 341.8054;
+	 stroke: #7fc146;
+}
+ svg[percent="16"] circle:nth-child(2) {
+	 stroke-dashoffset: 337.78416;
+	 stroke: #7fc146;
+}
+ svg[percent="17"] circle:nth-child(2) {
+	 stroke-dashoffset: 333.76292;
+	 stroke: #7fc146;
+}
+ svg[percent="18"] circle:nth-child(2) {
+	 stroke-dashoffset: 329.74168;
+	 stroke: #7fc146;
+}
+ svg[percent="19"] circle:nth-child(2) {
+	 stroke-dashoffset: 325.72044;
+	 stroke: #7fc146;
+}
+ svg[percent="20"] circle:nth-child(2) {
+	 stroke-dashoffset: 321.6992;
+	 stroke: #7fc146;
+}
+ svg[percent="21"] circle:nth-child(2) {
+	 stroke-dashoffset: 317.67796;
+	 stroke: #7fc146;
+}
+ svg[percent="22"] circle:nth-child(2) {
+	 stroke-dashoffset: 313.65672;
+	 stroke: #7fc146;
+}
+ svg[percent="23"] circle:nth-child(2) {
+	 stroke-dashoffset: 309.63548;
+	 stroke: #7fc146;
+}
+ svg[percent="24"] circle:nth-child(2) {
+	 stroke-dashoffset: 305.61424;
+	 stroke: #7fc146;
+}
+ svg[percent="25"] circle:nth-child(2) {
+	 stroke-dashoffset: 301.593;
+	 stroke: #7fc146;
+}
+ svg[percent="26"] circle:nth-child(2) {
+	 stroke-dashoffset: 297.57176;
+	 stroke: #7fc146;
+}
+ svg[percent="27"] circle:nth-child(2) {
+	 stroke-dashoffset: 293.55052;
+	 stroke: #7fc146;
+}
+ svg[percent="28"] circle:nth-child(2) {
+	 stroke-dashoffset: 289.52928;
+	 stroke: #7fc146;
+}
+ svg[percent="29"] circle:nth-child(2) {
+	 stroke-dashoffset: 285.50804;
+	 stroke: #7fc146;
+}
+ svg[percent="30"] circle:nth-child(2) {
+	 stroke-dashoffset: 281.4868;
+	 stroke: #7fc146;
+}
+ svg[percent="31"] circle:nth-child(2) {
+	 stroke-dashoffset: 277.46556;
+	 stroke: #7fc146;
+}
+ svg[percent="32"] circle:nth-child(2) {
+	 stroke-dashoffset: 273.44432;
+	 stroke: #7fc146;
+}
+ svg[percent="33"] circle:nth-child(2) {
+	 stroke-dashoffset: 269.42308;
+	 stroke: #7fc146;
+}
+ svg[percent="34"] circle:nth-child(2) {
+	 stroke-dashoffset: 265.40184;
+	 stroke: #7fc146;
+}
+ svg[percent="35"] circle:nth-child(2) {
+	 stroke-dashoffset: 261.3806;
+	 stroke: #7fc146;
+}
+ svg[percent="36"] circle:nth-child(2) {
+	 stroke-dashoffset: 257.35936;
+	 stroke: #7fc146;
+}
+ svg[percent="37"] circle:nth-child(2) {
+	 stroke-dashoffset: 253.33812;
+	 stroke: #7fc146;
+}
+ svg[percent="38"] circle:nth-child(2) {
+	 stroke-dashoffset: 249.31688;
+	 stroke: #7fc146;
+}
+ svg[percent="39"] circle:nth-child(2) {
+	 stroke-dashoffset: 245.29564;
+	 stroke: #7fc146;
+}
+ svg[percent="40"] circle:nth-child(2) {
+	 stroke-dashoffset: 241.2744;
+	 stroke: #ff9500;
+}
+ svg[percent="41"] circle:nth-child(2) {
+	 stroke-dashoffset: 237.25316;
+	 stroke: #ff9500;
+}
+ svg[percent="42"] circle:nth-child(2) {
+	 stroke-dashoffset: 233.23192;
+	 stroke: #ff9500;
+}
+ svg[percent="43"] circle:nth-child(2) {
+	 stroke-dashoffset: 229.21068;
+	 stroke: #ff9500;
+}
+ svg[percent="44"] circle:nth-child(2) {
+	 stroke-dashoffset: 225.18944;
+	 stroke: #ff9500;
+}
+ svg[percent="45"] circle:nth-child(2) {
+	 stroke-dashoffset: 221.1682;
+	 stroke: #ff9500;
+}
+ svg[percent="46"] circle:nth-child(2) {
+	 stroke-dashoffset: 217.14696;
+	 stroke: #ff9500;
+}
+ svg[percent="47"] circle:nth-child(2) {
+	 stroke-dashoffset: 213.12572;
+	 stroke: #ff9500;
+}
+ svg[percent="48"] circle:nth-child(2) {
+	 stroke-dashoffset: 209.10448;
+	 stroke: #ff9500;
+}
+ svg[percent="49"] circle:nth-child(2) {
+	 stroke-dashoffset: 205.08324;
+	 stroke: #ff9500;
+}
+ svg[percent="50"] circle:nth-child(2) {
+	 stroke-dashoffset: 201.062;
+	 stroke: #ff9500;
+}
+ svg[percent="51"] circle:nth-child(2) {
+	 stroke-dashoffset: 197.04076;
+	 stroke: #ff9500;
+}
+ svg[percent="52"] circle:nth-child(2) {
+	 stroke-dashoffset: 193.01952;
+	 stroke: #ff9500;
+}
+ svg[percent="53"] circle:nth-child(2) {
+	 stroke-dashoffset: 188.99828;
+	 stroke: #ff9500;
+}
+ svg[percent="54"] circle:nth-child(2) {
+	 stroke-dashoffset: 184.97704;
+	 stroke: #ff9500;
+}
+ svg[percent="55"] circle:nth-child(2) {
+	 stroke-dashoffset: 180.9558;
+	 stroke: #ff9500;
+}
+ svg[percent="56"] circle:nth-child(2) {
+	 stroke-dashoffset: 176.93456;
+	 stroke: #ff9500;
+}
+ svg[percent="57"] circle:nth-child(2) {
+	 stroke-dashoffset: 172.91332;
+	 stroke: #ff9500;
+}
+ svg[percent="58"] circle:nth-child(2) {
+	 stroke-dashoffset: 168.89208;
+	 stroke: #ff9500;
+}
+ svg[percent="59"] circle:nth-child(2) {
+	 stroke-dashoffset: 164.87084;
+	 stroke: #ff9500;
+}
+ svg[percent="60"] circle:nth-child(2) {
+	 stroke-dashoffset: 160.8496;
+	 stroke: #ff9500;
+}
+ svg[percent="61"] circle:nth-child(2) {
+	 stroke-dashoffset: 156.82836;
+	 stroke: #ff9500;
+}
+ svg[percent="62"] circle:nth-child(2) {
+	 stroke-dashoffset: 152.80712;
+	 stroke: #ff9500;
+}
+ svg[percent="63"] circle:nth-child(2) {
+	 stroke-dashoffset: 148.78588;
+	 stroke: #ff9500;
+}
+ svg[percent="64"] circle:nth-child(2) {
+	 stroke-dashoffset: 144.76464;
+	 stroke: #ff9500;
+}
+ svg[percent="65"] circle:nth-child(2) {
+	 stroke-dashoffset: 140.7434;
+	 stroke: #ff9500;
+}
+ svg[percent="66"] circle:nth-child(2) {
+	 stroke-dashoffset: 136.72216;
+	 stroke: #ff9500;
+}
+ svg[percent="67"] circle:nth-child(2) {
+	 stroke-dashoffset: 132.70092;
+	 stroke: #ff9500;
+}
+ svg[percent="68"] circle:nth-child(2) {
+	 stroke-dashoffset: 128.67968;
+	 stroke: #ff9500;
+}
+ svg[percent="69"] circle:nth-child(2) {
+	 stroke-dashoffset: 124.65844;
+	 stroke: #ff9500;
+}
+ svg[percent="70"] circle:nth-child(2) {
+	 stroke-dashoffset: 120.6372;
+	 stroke: #ff9500;
+}
+ svg[percent="71"] circle:nth-child(2) {
+	 stroke-dashoffset: 116.61596;
+	 stroke: #ff9500;
+}
+ svg[percent="72"] circle:nth-child(2) {
+	 stroke-dashoffset: 112.59472;
+	 stroke: #ff9500;
+}
+ svg[percent="73"] circle:nth-child(2) {
+	 stroke-dashoffset: 108.57348;
+	 stroke: #ff9500;
+}
+ svg[percent="74"] circle:nth-child(2) {
+	 stroke-dashoffset: 104.55224;
+	 stroke: #ff9500;
+}
+ svg[percent="75"] circle:nth-child(2) {
+	 stroke-dashoffset: 100.531;
+	 stroke: #ff9500;
+}
+ svg[percent="76"] circle:nth-child(2) {
+	 stroke-dashoffset: 96.50976;
+	 stroke: #ff9500;
+}
+ svg[percent="77"] circle:nth-child(2) {
+	 stroke-dashoffset: 92.48852;
+	 stroke: #ff9500;
+}
+ svg[percent="78"] circle:nth-child(2) {
+	 stroke-dashoffset: 88.46728;
+	 stroke: #ff9500;
+}
+ svg[percent="79"] circle:nth-child(2) {
+	 stroke-dashoffset: 84.44604;
+	 stroke: #ff9500;
+}
+ svg[percent="80"] circle:nth-child(2) {
+	 stroke-dashoffset: 80.4248;
+	 stroke: #fa4e3b;
+}
+ svg[percent="81"] circle:nth-child(2) {
+	 stroke-dashoffset: 76.40356;
+	 stroke: #fa4e3b;
+}
+ svg[percent="82"] circle:nth-child(2) {
+	 stroke-dashoffset: 72.38232;
+	 stroke: #fa4e3b;
+}
+ svg[percent="83"] circle:nth-child(2) {
+	 stroke-dashoffset: 68.36108;
+	 stroke: #fa4e3b;
+}
+ svg[percent="84"] circle:nth-child(2) {
+	 stroke-dashoffset: 64.33984;
+	 stroke: #fa4e3b;
+}
+ svg[percent="85"] circle:nth-child(2) {
+	 stroke-dashoffset: 60.3186;
+	 stroke: #fa4e3b;
+}
+ svg[percent="86"] circle:nth-child(2) {
+	 stroke-dashoffset: 56.29736;
+	 stroke: #fa4e3b;
+}
+ svg[percent="87"] circle:nth-child(2) {
+	 stroke-dashoffset: 52.27612;
+	 stroke: #fa4e3b;
+}
+ svg[percent="88"] circle:nth-child(2) {
+	 stroke-dashoffset: 48.25488;
+	 stroke: #fa4e3b;
+}
+ svg[percent="89"] circle:nth-child(2) {
+	 stroke-dashoffset: 44.23364;
+	 stroke: #fa4e3b;
+}
+ svg[percent="90"] circle:nth-child(2) {
+	 stroke-dashoffset: 40.2124;
+	 stroke: #fa4e3b;
+}
+ svg[percent="91"] circle:nth-child(2) {
+	 stroke-dashoffset: 36.19116;
+	 stroke: #fa4e3b;
+}
+ svg[percent="92"] circle:nth-child(2) {
+	 stroke-dashoffset: 32.16992;
+	 stroke: #fa4e3b;
+}
+ svg[percent="93"] circle:nth-child(2) {
+	 stroke-dashoffset: 28.14868;
+	 stroke: #fa4e3b;
+}
+ svg[percent="94"] circle:nth-child(2) {
+	 stroke-dashoffset: 24.12744;
+	 stroke: #fa4e3b;
+}
+ svg[percent="95"] circle:nth-child(2) {
+	 stroke-dashoffset: 20.1062;
+	 stroke: #fa4e3b;
+}
+ svg[percent="96"] circle:nth-child(2) {
+	 stroke-dashoffset: 16.08496;
+	 stroke: #fa4e3b;
+}
+ svg[percent="97"] circle:nth-child(2) {
+	 stroke-dashoffset: 12.06372;
+	 stroke: #fa4e3b;
+}
+ svg[percent="98"] circle:nth-child(2) {
+	 stroke-dashoffset: 8.04248;
+	 stroke: #fa4e3b;
+}
+ svg[percent="99"] circle:nth-child(2) {
+	 stroke-dashoffset: 4.02124;
+	 stroke: #fa4e3b;
+}
+ svg[percent="100"] circle:nth-child(2) {
+	 stroke-dashoffset: 0;
+	 stroke: #fa4e3b;
+}
+ svg text {
+	 fill: #eee;
+}
+ svg text.value {
+	 font-weight: 400;
+	 font-size: 26px;
+}
+ svg text.caption {
+	 font-weight: bold;
+	 font-size: 14px;
+	 text-transform: uppercase;
+}
+ 

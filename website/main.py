@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 app.register_blueprint(authentication.auth)
 
+
 app.secret_key = urandom(12)
 
 
@@ -16,9 +17,10 @@ def index():
     return render_template("index.html")
 
 
-@app.errorhandler(404)
+@app.errorhandler(Exception)
 def page_not_found(error):
-    return render_template('error-pages/404.html', message=error.description), 404
+    return render_template('error-pages/404.html', code=error.code,
+                           name=error.name, message=error.description), 404
 
 
 @app.errorhandler(401)

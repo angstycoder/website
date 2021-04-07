@@ -4,9 +4,10 @@ from website.views.database import AuthenticationStore
 from decouple import config
 from flask_login import LoginManager
 from secrets import compare_digest
+from .botpanel import BotStats
 
 auth = Blueprint('auth', __name__)
-
+stat = BotStats()
 
 login_manager = LoginManager()
 
@@ -39,12 +40,9 @@ def signup():
         username = request.form['username']
         password = request.form['password']
         password_repeat = request.form['password2']
-        print(username, password, password_repeat)
         if not compare_digest(password, password_repeat):
-            print("here")
             return
         if db.redis.exists(username):
-            print("here1")
             return
         db.create_user(user=username, password=password)
         return redirect(url_for('auth.login'))
@@ -53,6 +51,8 @@ def signup():
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == "GET":
+        return render_template("index.html")
     if current_user.is_authenticated:
         return redirect(url_for('auth.dashboard'))
     if request.method == "POST":
@@ -81,3 +81,24 @@ def dashboard():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+@auth.route('/stats')
+@login_required
+def stats():
+    return render_template('bot/bot.html', stats=stat.get_stats())
+
+
+@auth.route('/usage')
+@login_required
+def usage():
+    return render_template('usage/usage.html')
+
+
+@auth.route('/webhook', methods=['POST'])
+@login_required
+def webhook():
+    print(request.form)
+    message = request.form['message']
+    stat.send_webhook(message)
+    return '', 204
