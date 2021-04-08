@@ -1,5 +1,5 @@
 from flask import render_template, Flask, redirect, url_for, flash
-from .views import authentication
+from .views import authentication, apiroutes
 from os import urandom
 
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 app.register_blueprint(authentication.auth)
-
+app.register_blueprint(apiroutes.api)
 
 app.secret_key = urandom(12)
 

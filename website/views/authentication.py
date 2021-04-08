@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, redirect, request, url_for, flash
 from flask_login import login_user, logout_user, login_required, UserMixin, current_user
-from website.views.database import AuthenticationStore
+from website.views.backend.database import AuthenticationStore
 from decouple import config
 from flask_login import LoginManager
 from secrets import compare_digest
-from .botpanel import BotStats
+from website.views.bot.botpanel import BotStats
 
 auth = Blueprint('auth', __name__)
 stat = BotStats()

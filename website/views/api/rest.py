@@ -1,5 +1,4 @@
 import aiohttp
-import asyncio
 from bs4 import BeautifulSoup
 
 
@@ -11,14 +10,14 @@ async def request(url: str):
 
 
 class GitHubRepo:
-    def __init__(self, url):
+    def __init__(self, url: str, loop):
+        self.loop = loop
         self.URL = url
         self.author = f"https://github.com/{url.split('/')[3]}"
         self.soup: BeautifulSoup = None
 
     def get_page(self):
-        loop = asyncio.get_event_loop()
-        data = loop.run_until_complete(request(self.URL))
+        data = self.loop.run_until_complete(request(self.URL))
         self.soup = BeautifulSoup(data, features="html.parser")
 
     def socials(self):
@@ -29,7 +28,8 @@ class GitHubRepo:
         track = self.soup.find_all("span", ["Counter"])
         issues, prs = [tag.get_text().strip() for tag in track[1:3]]
         contributors = track[-1].get_text()
-        last_commit = self.soup.find("relative-time", ["no-wrap"]).get_text()
+        last_commit = self.soup.find("relative-time", ["no-wrap"])
+        last_commit = last_commit.get_text() if last_commit.text else None
         return issues, prs, contributors, last_commit
 
     def stats(self):
@@ -49,8 +49,3 @@ class GitHubRepo:
         stat_dict['author'] = self.author
         return stat_dict
 
-
-URL = "https://github.com/DavidBuchanan314/tweetable-polyglot-png"
-
-myrepo = GitHubRepo(url=URL)
-print(myrepo.stats())
